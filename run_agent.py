@@ -17,7 +17,7 @@ def main():
 
     agent = ReActAgent(llm=llm, tools=TOOLS, max_steps=5)
 
-    question = "I want to buy an iphone using coupon WINNER. Check stock and tell me the discount."
+    question = "Find an iPhone product page, extract its price and availability, and summarize the result."
     answer = agent.run(question)
 
     print(answer)

@@ -44,10 +44,10 @@ This guide is designed for instructors to lead a 240-minute (4-hour) intensive l
 ## 💡 Teaching Tips & Examples
 
 ### 🏦 Recommended Scenario: "The Smart E-commerce Assistant"
-- **Tool 1**: `check_stock(item_name)` -> Returns available quantity.
-- **Tool 2**: `get_discount(coupon_code)` -> Returns percentage.
-- **Tool 3**: `calc_shipping(weight, destination)` -> Returns cost.
-- **Test Case**: "I want to buy 2 iPhones using code 'WINNER' and ship to Hanoi. What is the total price?"
+- **Tool 1**: `search_web(query)` -> Searches live product information through Tavily.
+- **Tool 2**: `extract_product_info(url)` -> Extracts product title, price, and availability from a product page.
+- **Tool 3**: `calculator(expression)` -> Calculates totals from tool-observed prices.
+- **Test Case**: "Find an iPhone product page, extract its price and availability, and calculate the total for 2 units."
 
 ### ⚠️ Common Pitfalls to Watch For
 1.  **Infinite Loops**: The agent repeats the same "Thought" forever.

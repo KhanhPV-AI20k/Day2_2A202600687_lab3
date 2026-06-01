@@ -1,6 +1,5 @@
 from src.tools.calculator import calculator
-from src.tools.ecommerce import check_stock, get_discount
-from src.tools.search_tool import browse_url, search_web
+from src.tools.search_tool import browse_url, extract_product_info, search_web
 
 
 TOOLS = [
@@ -10,23 +9,18 @@ TOOLS = [
         "function": calculator,
     },
     {
-        "name": "check_stock",
-        "description": "Check product stock. Input is a product name, for example: iphone.",
-        "function": check_stock,
-    },
-    {
-        "name": "get_discount",
-        "description": "Get discount percentage from a coupon code. Input example: WINNER.",
-        "function": get_discount,
-    },
-    {
         "name": "search_web",
-        "description": "Search ecommerce demo products. Input is a product query, for example: iphone price.",
+        "description": "Search the live web with Tavily for ecommerce product information. Input is a product query, for example: iphone price.",
         "function": search_web,
     },
     {
         "name": "browse_url",
-        "description": "Browse ecommerce demo product pages. Input is a product URL, for example: https://shop.example.com/iphone.",
+        "description": "Extract page content with Tavily. Input is a product URL from search results.",
         "function": browse_url,
+    },
+    {
+        "name": "extract_product_info",
+        "description": "Extract product title, price, and availability from a product URL using Tavily.",
+        "function": extract_product_info,
     },
 ]
